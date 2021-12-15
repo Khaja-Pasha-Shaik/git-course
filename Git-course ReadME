@@ -1,0 +1,534 @@
+
+shaik@LAPTOP-HGO5D9PS MINGW64 ~
+$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+shaik@LAPTOP-HGO5D9PS MINGW64 ~
+$ git config --global user.name "Khaja Pasha"
+
+shaik@LAPTOP-HGO5D9PS MINGW64 ~
+$ git config --global user.name "shaikkhajapasha94@gmail.com"
+
+shaik@LAPTOP-HGO5D9PS MINGW64 ~
+$ git config --edit --global
+
+shaik@LAPTOP-HGO5D9PS MINGW64 ~
+$ code\
+> ^C
+
+shaik@LAPTOP-HGO5D9PS MINGW64 ~
+$ code
+
+shaik@LAPTOP-HGO5D9PS MINGW64 ~
+$ git config --global core.editor "code --wait --new-window"
+
+shaik@LAPTOP-HGO5D9PS MINGW64 ~
+$ git config --edit --global
+
+shaik@LAPTOP-HGO5D9PS MINGW64 ~
+$ cd \
+> ^C
+
+shaik@LAPTOP-HGO5D9PS MINGW64 ~
+$ cd /
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /
+$ cd D:/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d
+$ mkdir Git-Course
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d
+$ cd Git-Course/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course
+$ mkdir session-1
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course
+$ cd session-1/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1
+$ git init
+Initialized empty Git repository in D:/Git-Course/session-1/.git/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ ls -a
+./  ../  .git/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ ls -la
+total 4
+drwxr-xr-x 1 shaik 197609 0 Dec 15 12:18 ./
+drwxr-xr-x 1 shaik 197609 0 Dec 15 12:18 ../
+drwxr-xr-x 1 shaik 197609 0 Dec 15 12:18 .git/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ code readme.md
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ git add readme.md
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   readme.md
+
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ git commit -m "some commit"
+[master (root-commit) 81db2bf] some commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.md
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ git log
+commit 81db2bfb288ae022787fdf1247c667c69392bdfe (HEAD -> master)
+Author: shaikkhajapasha94@gmail.com <Khaja Pasha Shaik>
+Date:   Wed Dec 15 12:26:28 2021 +0530
+
+    some commit
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ cd /
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /
+$ ls -al ~/.ssh
+ls: cannot access '/c/Users/shaik/.ssh': No such file or directory
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /
+$ pwd
+/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /
+$ cd C:/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /c
+$ cd Users/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /c/Users
+$ ls -al ~/.ssh
+ls: cannot access '/c/Users/shaik/.ssh': No such file or directory
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /c/Users
+$ cd /
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /
+$ ssh-keygen -t rsa -b 4096 -C "shaikkhajapasha94@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/shaik/.ssh/id_rsa):
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /
+$ ssh-keygen -t rsa -b 4096 -C "shaikkhajapasha94@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/shaik/.ssh/id_rsa):
+Created directory '/c/Users/shaik/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/shaik/.ssh/id_rsa
+Your public key has been saved in /c/Users/shaik/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:7h8AnkVEmOHLWgffvuAiLDTgo4jXtES2OKTaKAaVgfA shaikkhajapasha94@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|o.    .*+        |
+|...  .o.         |
+|  Eo  + .        |
+|. + oo B .       |
+|.= + .* S .      |
+|oo= +o o o       |
+|*+.B..  o o      |
+|B.+ = .o . o     |
+|o. . . .o.o      |
++----[SHA256]-----+
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /
+$ eval $(ssh-agent -s)
+Agent pid 1531
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/shaik/.ssh/id_rsa (shaikkhajapasha94@gmail.com)
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /
+$ ssh -T git@github.com
+The authenticity of host 'github.com (13.234.176.102)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi Khaja-Pasha-Shaik! You've successfully authenticated, but GitHub does not provide shell access.
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /
+$ cd D:/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d
+$ cd Git-Course/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course
+$ ls
+session-1/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course
+$ cd session-1/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ ls
+readme.md
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ cd..
+bash: cd..: command not found
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-1 (master)
+$ cd ..
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course
+$ mkdir session-repos
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course
+$ cd mk
+bash: cd: mk: No such file or directory
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course
+$ cd session-repos/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos
+$ git@github.com:Khaja-Pasha-Shaik/urban-waddle.git
+bash: git@github.com:Khaja-Pasha-Shaik/urban-waddle.git: No such file or directory
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos
+$ git clone git@github.com:Khaja-Pasha-Shaik/urban-waddle.git
+Cloning into 'urban-waddle'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (4/4), 15.08 KiB | 1.68 MiB/s, done.
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos
+$ ls -la
+total 0
+drwxr-xr-x 1 shaik 197609 0 Dec 15 13:36 ./
+drwxr-xr-x 1 shaik 197609 0 Dec 15 13:35 ../
+drwxr-xr-x 1 shaik 197609 0 Dec 15 13:36 urban-waddle/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos
+$ cd urban-waddle/
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ ls
+LICENSE
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ cd LICENSE
+bash: cd: LICENSE: Not a directory
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ vi LICENSE
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ ls -la
+total 48
+drwxr-xr-x 1 shaik 197609     0 Dec 15 13:37 ./
+drwxr-xr-x 1 shaik 197609     0 Dec 15 13:36 ../
+drwxr-xr-x 1 shaik 197609     0 Dec 15 13:36 .git/
+-rw-r--r-- 1 shaik 197609  6352 Dec 15 13:36 .gitignore
+-rw-r--r-- 1 shaik 197609 35823 Dec 15 13:36 LICENSE
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        garden_cart.png
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git add .
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   garden_cart.png
+        new file:   index.html
+
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git commit -m "website files added"
+[main d2ce963] website files added
+ 2 files changed, 7 insertions(+)
+ create mode 100644 garden_cart.png
+ create mode 100644 index.html
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 40.53 KiB | 3.38 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Khaja-Pasha-Shaik/urban-waddle.git
+   1ef3d11..d2ce963  main -> main
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git fetch
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 12 (delta 4), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (12/12), 2.79 KiB | 81.00 KiB/s, done.
+From github.com:Khaja-Pasha-Shaik/urban-waddle
+   d2ce963..9d8297f  main          -> origin/main
+ * [new branch]      sample-branch -> origin/sample-branch
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git pull
+Updating d2ce963..9d8297f
+Fast-forward
+ CODEOWNERS | 1 +
+ README.md  | 6 ++++++
+ index.html | 4 ++--
+ 3 files changed, 9 insertions(+), 2 deletions(-)
+ create mode 100644 CODEOWNERS
+ create mode 100644 README.md
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git branch -al
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/sample-branch
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git branch -all
+error: did you mean `--all` (with two dashes)?
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git branch --all
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/sample-branch
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ ls
+CODEOWNERS  LICENSE  README.md  garden_cart.png  index.html
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ vi index.html
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git branch --all
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/sample-branch
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git checkout sample-branch
+Switched to a new branch 'sample-branch'
+Branch 'sample-branch' set up to track remote branch 'sample-branch' from 'origin'.
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (sample-branch)
+$ la
+bash: la: command not found
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (sample-branch)
+$ ls
+CODEOWNERS  LICENSE  README.md  garden_cart.png  index.html
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (sample-branch)
+$ vi index.html
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (sample-branch)
+$ git branch --all
+  main
+* sample-branch
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/sample-branch
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (sample-branch)
+$ git checkout HEAD
+Your branch is up to date with 'origin/sample-branch'.
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (sample-branch)
+$ vi index.html
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (sample-branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ vi index.html
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (main)
+$ git checkout -b add-more-in-index
+Switched to a new branch 'add-more-in-index'
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (add-more-in-index)
+$ vi index.html
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (add-more-in-index)
+$ git status
+On branch add-more-in-index
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (add-more-in-index)
+$ git commit -am "index html file changed in 2nd branch"
+[add-more-in-index 5c76285] index html file changed in 2nd branch
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (add-more-in-index)
+$ git log
+commit 5c7628586dbe20f9729646df4d50604528f725ad (HEAD -> add-more-in-index)
+Author: shaikkhajapasha94@gmail.com <Khaja Pasha Shaik>
+Date:   Wed Dec 15 15:57:36 2021 +0530
+
+    index html file changed in 2nd branch
+
+commit 9d8297f1c94e3efb1056c521a743cd1b5e812c71 (origin/main, origin/HEAD, main)
+Author: Khaja-Pasha-Shaik <96168104+Khaja-Pasha-Shaik@users.noreply.github.com>
+Date:   Wed Dec 15 15:19:47 2021 +0530
+
+    Create CODEOWNERS
+
+commit 98e75645b6651aeea73481ec72fbe92a56effa07
+Author: Khaja-Pasha-Shaik <96168104+Khaja-Pasha-Shaik@users.noreply.github.com>
+Date:   Wed Dec 15 15:17:37 2021 +0530
+
+    Readme file changed
+
+commit 564562538918639a7440bb49cca6437be615269b
+Author: Khaja-Pasha-Shaik <96168104+Khaja-Pasha-Shaik@users.noreply.github.com>
+Date:   Wed Dec 15 15:00:49 2021 +0530
+
+    Committing after pushing - index.html
+
+commit d2ce963dedbc4a8f2231b89373426529fac1f0db
+Author: shaikkhajapasha94@gmail.com <Khaja Pasha Shaik>
+Date:   Wed Dec 15 14:57:39 2021 +0530
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (add-more-in-index)
+$ git push -u origin add-more-in-index
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 356 bytes | 356.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'add-more-in-index' on GitHub by visiting:
+remote:      https://github.com/Khaja-Pasha-Shaik/urban-waddle/pull/new/add-more-in-index
+remote:
+To github.com:Khaja-Pasha-Shaik/urban-waddle.git
+ * [new branch]      add-more-in-index -> add-more-in-index
+Branch 'add-more-in-index' set up to track remote branch 'add-more-in-index' from 'origin'.
+
+shaik@LAPTOP-HGO5D9PS MINGW64 /d/Git-Course/session-repos/urban-waddle (add-more-in-index)
+$
