@@ -31,9 +31,9 @@
 ** Whats Main Repo ? 
 
 *** Git works in a way that it has a working directory (That is where you have initialezed Git) 
-    --> Then a staging Area (The files with git add but not yet committed will stay here)
-    --> Then there is a local repository (which not the main one)
-    --> Then there is a remote repository and this is the main one
+    --> Then a staging Area (The files with git add but not yet committed will stay here)  
+    --> Then there is a local repository (which not the main one)  
+    --> Then there is a remote repository and this is the main one   
     
 ### Next Steps after init and files ready in working directory
 
