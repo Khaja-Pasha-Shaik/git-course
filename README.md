@@ -10,43 +10,43 @@
 
 #### Making Git open into default Code Editor
 
-* Make sure you have the Environment vairiables defined for that Editor in "Path"
+* Make sure you have the Environment vairiables defined for that Editor in "Path"  
   If VS Code --> we will be having "C:/....../Microsoft VS Code/bin"
   
-  If set, then in Git Bash 
+  If set, then in Git Bash    
   $ code (and Enter) --> This is automatically opens up the VS Code
   
-** Further settings related to Editor
+** Further settings related to Editor   
 
-   $ git config --global core.editor "code --wait --new-window"
+   $ git config --global core.editor "code --wait --new-window"   
    $ git config --edit --global
    
 ### Suppose you want some folder to be looked by Git for version control
 
-* Then initialize Git 
+* Then initialize Git    
   $ git init  (After Navigating to that respective folder)
   
 * You have intialized Git have some files and you think these files are ok to be pushed to main repo
 
 ** Whats Main Repo ? 
 
-*** Git works in a way that it has a working directory (That is where you have initialezed Git) 
-    --> Then a staging Area (The files with git add but not yet committed will stay here)  
+*** Git works in a way that it has a working directory (That is where you have initialezed Git)    
+    --> Then a staging Area (The files with git add but not yet committed will stay here)      
     --> Then there is a local repository (which not the main one)  
     --> Then there is a remote repository and this is the main one   
     
 ### Next Steps after init and files ready in working directory
 
-* Now to now what are the files, use command:
-  $ git status
+* Now to now what are the files, use command:   
+  $ git status   
   
   (Files will be displayed in red color that are not committed)
-  
-* Add those files which are in red color (becoz those are the files not in sync)
+   
+* Add those files which are in red color (becoz those are the files not in sync)   
   
   $ git add <file_names>  |(or)|  $ git add .    (To add all the files)
   
-* Now the files are ready to be committed to the local repo
+* Now the files are ready to be committed to the local repo   
 
   $ git commit -m "Some_commments_for_tracking"
   
@@ -67,9 +67,9 @@
 
 $ eval $(ssh-agent -s)   (A PID will be displayed if running)
 
-* To add SSH Key
+* To add SSH Key   
 
-$ ssh-add ~/.ssh/id_rsa
+$ ssh-add ~/.ssh/id_rsa   
 
 A path will be displayed where the key is saved. Navigate to that path and Copy
 
@@ -81,7 +81,7 @@ $ ssh -T git@github.com
 
 ## Pushing files from local repo to main(Remote) Repo
 
-* Assuming all the steps till commit to local repo are done, Time to push to the Main Repo
+* Assuming all the steps till commit to local repo are done, Time to push to the Main Repo   
 
 $ git push origin main
 
