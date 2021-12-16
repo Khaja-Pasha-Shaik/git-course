@@ -17,7 +17,7 @@
     
        $ code (and Enter) --> This is automatically opens up the VS Code
   
-** Further settings related to Editor   
+> Further settings related to Editor   
 
           $ git config --global core.editor "code --wait --new-window"   
           $ git config --edit --global
