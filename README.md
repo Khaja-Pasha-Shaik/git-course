@@ -30,9 +30,9 @@
   
 * You have intialized Git have some files and you think these files are ok to be pushed to main repo
 
-** Whats Main Repo ? 
+> Whats Main Repo ? 
 
-*** Git works in a way that it has a working directory (That is where you have initialezed Git)    
+> > Git works in a way that it has a working directory (That is where you have initialezed Git)    
     --> Then a staging Area (The files with git add but not yet committed will stay here)      
     --> Then there is a local repository (which not the main one)  
     --> Then there is a remote repository and this is the main one   
