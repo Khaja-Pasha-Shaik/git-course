@@ -19,8 +19,8 @@
   
 ** Further settings related to Editor   
 
-       $ git config --global core.editor "code --wait --new-window"   
-       $ git config --edit --global
+          $ git config --global core.editor "code --wait --new-window"   
+          $ git config --edit --global
    
 ### Suppose you want some folder to be looked by Git for version control
 
